@@ -1,0 +1,184 @@
+/* تنظیمات پایه و ریست */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px; /* این باعث می‌شود که rem ها قابل پیش‌بینی‌تر باشند */
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #191919;
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+/* کانتینر اصلی */
+.container {
+    width: 100%;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* طراحی ریسپانسیو کانتینر */
+@media screen and (min-width: 576px) {
+    .container {
+        width: 54rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        width: 72rem;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        width: 96rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        width: 114rem;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .container {
+        width: 137rem;
+    }
+}
+
+/* طراحی نمایشگر */
+.calc-screen {
+    width: 100%;
+    max-width: 35rem;
+    box-shadow: -1px -1px 3px 0 #636363, 1px 1px 3px 0 #000;
+    border-radius: 20px;
+    margin: 5rem auto 0;
+    padding: 1rem;
+    background-color: transparent;
+}
+
+.top {
+    height: 12rem;
+    width: 100%;
+    background-color: transparent;
+}
+
+.input-result {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: clamp(3.5rem, 6vw, 6rem); /* فونت متغیر که به اندازه صفحه تطبیق پیدا می‌کند */
+    caret-color: #eb2a46;
+    padding: .5rem;
+    text-align: right; /* اعداد به سمت راست تراز می‌شوند */
+}
+
+/* طراحی دکمه‌ها */
+.bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.input {
+    height: 6.5rem;
+    width: 6.5rem;
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 2.2rem;
+    font-weight: 500;
+    box-shadow: -1px -1px 3px 0 #636363, 1px 1px 3px 0 #000;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* رنگ دکمه‌ها */
+.bg_eb2a46 {
+    background-color: #eb2a46 !important;
+}
+
+.input:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+.equal {
+    width: 13rem;
+    background-color: #eb2a46;
+    box-shadow: -1px -1px 5px 0 #b71c29, 1px 1px 5px 0 #ff4b6b;
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+.equal:hover {
+    background-color: #ff4b6b;
+    box-shadow: -1px -1px 6px 0 #b71c29, 1px 1px 6px 0 #ff6b8b;
+    cursor: pointer;
+}
+
+/* استایل برای وقتی که دکمه‌ها فشرده می‌شوند */
+.input:active {
+    transform: scale(0.95);
+}
+
+.equal:active {
+    transform: scale(0.95);
+}
+/* تنظیمات برای تبلت‌ها */
+@media screen and (max-width: 768px) {
+    .input-result {
+        font-size: 5rem; /* اندازه فونت را برای تبلت کاهش می‌دهیم */
+    }
+
+    .input {
+        height: 6rem;
+        width: 6rem;
+        font-size: 2rem;
+    }
+
+    .equal {
+        width: 11rem;
+    }
+}
+
+/* تنظیمات ریسپانسیو برای موبایل */
+@media screen and (max-width: 576px) {
+    .input-result {
+        font-size: 4.5rem; /* اندازه فونت را برای موبایل کاهش می‌دهیم */
+    }
+
+    .input {
+        height: 5rem;
+        width: 5rem;
+        font-size: 1.8rem;
+    }
+
+    .equal {
+        width: 10rem;
+    }
+}
+
+
